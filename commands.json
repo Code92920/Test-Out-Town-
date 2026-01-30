@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ping",
+    "description": "يختبر استجابة البوت.",
+    "usage": "!ping"
+  },
+  {
+    "name": "help",
+    "description": "يعرض قائمة بالأوامر.",
+    "usage": "!help"
+  },
+  {
+    "name": "info",
+    "description": "يعرض معلومات عن السيرفر أو البوت.",
+    "usage": "!info"
+  }
+]
