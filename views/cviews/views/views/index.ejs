@@ -1,0 +1,24 @@
+<% layout('layout', { title: 'OUT Town | اوت تاون' }) %>
+
+<section>
+  <h2 class="hero-title">OUT Town <span class="ar-title">| اوت تاون</span></h2>
+  <p class="hero-sub">مرحباً بكم في OUT Town — سيرفر رول بلاي مخصص في الشرق الأوسط. انضم إلينا الآن وعيش تجربة رول بلاي كما تريد.</p>
+
+  <p style="text-align:center; margin-top:18px;">
+    <a class="btn" href="<%= botInviteLink %>" target="_blank">أضف البوت</a>
+  </p>
+
+  <% if (user) { %>
+    <div class="user-box">
+      <img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png?size=128" alt="avatar" />
+      <div>
+        <strong><%= user.username %>#<%= user.discriminator %></strong>
+        <p>السيرفرات: <%= user.guilds ? user.guilds.length : 0 %></p>
+      </div>
+    </div>
+  <% } else { %>
+    <p style="text-align:center; margin-top:20px;">
+      <a class="btn" href="/login">تسجيل الدخول عبر Discord</a>
+    </p>
+  <% } %>
+</section>
