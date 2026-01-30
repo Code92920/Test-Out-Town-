@@ -1,0 +1,19 @@
+<% layout('layout', { title: 'أوامر - OUT Town' }) %>
+
+<section>
+  <h2>قائمة الأوامر</h2>
+  <% if (!commands || commands.length === 0) { %>
+    <p>لا توجد أوامر حالياً.</p>
+  <% } else { %>
+    <ul class="commands-list">
+      <% commands.forEach(cmd => { %>
+        <li>
+          <strong><%= cmd.name %></strong> — <%= cmd.description %>
+          <% if (cmd.usage) { %>
+            <div class="usage">الاستخدام: <code><%= cmd.usage %></code></div>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
